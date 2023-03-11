@@ -1,0 +1,39 @@
+Informacje o poleceniach docker (gdzie szukac)
+docker nazwa-polecenia --help
+docker run --help
+
+Podstawowe komendy
+docker run
+
+# Wyświetlenie listy kontenerów obecnych na naszym komputerze. 
+docker ps
+docker ps --all or docker ps -a
+
+
+# Lista wszystkich obrazów, które są zapisane w naszej pamięci cache wraz z ich rozmiarami.
+docker images
+
+# Usunięcie pojedynczych kontenerów.
+docker rm
+docker rm $(docker ps -a -q)
+
+# Komenda czyszcząca nasz system z nieużywanych kontenerów, obrazów i kilku innych używanych przez Dockera zasobów. 
+docker system prune
+
+# Wyświetlenie wszystkich logów, które zostały wygenerowane w konkretnym kontenerze.
+docker logs
+
+# Grzeczne wyłączenie kontenera.
+docker stop
+
+# Natychmiastowe wyłączenie kontenera bez podejmowania żadnych innych akcji. 
+docker kill
+
+# Uruchomienie kolejnego procesu wewnątrz kontenera. 
+docker exec
+docker exec -it containerId sh or docker run -it busybox sh
+
+
+docker rmi
+docker inspect
+docker history pgadmin
